@@ -26,6 +26,10 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "default-param-last": "off",
+    "no-void": "off",
+    "no-param-reassign": "off",
+    "react/require-default-props": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "consistent-return": "off",
     "react-hooks/rules-of-hooks": "error",
