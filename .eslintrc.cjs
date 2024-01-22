@@ -21,6 +21,7 @@ module.exports = {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
   plugins: ['@typescript-eslint', 'react-refresh', 'react', 'react-hooks'],
   rules: {
     'default-param-last': 'off',
