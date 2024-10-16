@@ -77,3 +77,13 @@ npm run preview
 ```
 
 Если директория не `client` или `server`, то можно добавить соответствующую строчку в данный массив.
+
+## FAQ 
+
+1. На windows из-под wsl Vite не следит за изменениями файлов
+Добавить в `vite.config`
+
+```js
+server: { watch: { usePolling: true } }
+```
+Подробнее:  https://vitejs.dev/config/server-options.html#server-watch. 
