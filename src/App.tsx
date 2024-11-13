@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg';
 import elbrusLogo from './assets/elbrus.svg';
 import './App.css';
 
-function App(): JSX.Element {
+function App(): React.JSX.Element {
   const [count, setCount] = useState(0);
 
   return (
