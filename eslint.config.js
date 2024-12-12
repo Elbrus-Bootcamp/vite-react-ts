@@ -33,6 +33,10 @@ export default tseslint.config(
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
 
       // Общие правила
+      'class-methods-use-this': 'off',
+      'no-useless-constructor': 'off',
+      'no-unused-vars': 'off',
+      'no-empty-function': 'off',
       'no-console': 'off',
       'default-param-last': 'off',
       'consistent-return': 'warn',
