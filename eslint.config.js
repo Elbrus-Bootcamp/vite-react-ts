@@ -4,6 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import elbrusConfig from '@elbrus/eslint-config';
+import fsdLayers from 'eslint-plugin-fsd-layers';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -25,11 +26,13 @@ export default tseslint.config(
     },
     plugins: {
       'react-hooks': reactHooks,
+      'fsd-layers': fsdLayers,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
 
       // Общие правила
+      'fsd-layers/no-import-from-top': 'error',
       'class-methods-use-this': 'warn',
       'no-console': 'off',
       'default-param-last': 'off',
