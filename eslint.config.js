@@ -1,10 +1,12 @@
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
-import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
+import tseslint from 'typescript-eslint';
 import elbrusConfig from '@elbrus/eslint-config';
+import elbrusPlugin from '@elbrus/eslint-plugin';
 import fsdLayers from 'eslint-plugin-fsd-layers';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -26,12 +28,15 @@ export default tseslint.config(
     },
     plugins: {
       'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
       'fsd-layers': fsdLayers,
+      '@elbrus': elbrusPlugin,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
 
       // Общие правила
+      '@elbrus/prefer-for-of': 'error',
       'fsd-layers/no-import-from-top': 'error',
       'class-methods-use-this': 'warn',
       'no-console': 'off',
