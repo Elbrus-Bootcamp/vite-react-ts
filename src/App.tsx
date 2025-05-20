@@ -1,9 +1,9 @@
 import type { JSX } from 'react';
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import elbrusLogo from './assets/elbrus.svg';
+import reactLogo from '@/assets/react.svg';
+import elbrusLogo from '@/assets/elbrus.svg';
 import viteLogo from '/vite.svg';
-import './App.css';
+import '@/App.css';
 
 function App(): JSX.Element {
   const [count, setCount] = useState(0);
@@ -11,6 +11,7 @@ function App(): JSX.Element {
   return (
     <>
       <title>Elbrus Bootcamp</title>
+      <meta name="description" content="Elbrus Bootcamp Vite React Typescript Template" />
       <div>
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
